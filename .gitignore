@@ -52,3 +52,8 @@ temp/
 .env
 .env.txt
 firebase-service-account.json
+
+# Ignore sensitive files
+.env
+.env.txt
+firebase-service-account.json
