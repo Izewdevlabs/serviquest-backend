@@ -47,3 +47,8 @@ seeders/
 # Uploads & temp files
 uploads/
 temp/
+
+# Secrets
+.env
+.env.txt
+firebase-service-account.json
