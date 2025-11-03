@@ -1,11 +1,12 @@
 {
   "name": "serviquest-backend",
   "version": "1.0.0",
+  "description": "ServiQuest backend API",
   "main": "src/server.js",
   "type": "module",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "cleanup:avatars": "node src/utils/cleanupOldAvatars.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -14,12 +15,16 @@
     "express": "^4.19.2",
     "firebase-admin": "^13.5.0",
     "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
+    "node-cron": "^4.2.1",
     "pg": "^8.11.3",
     "sequelize": "^6.37.1",
+    "sharp": "^0.34.4",
     "socket.io": "^4.8.1",
     "stripe": "^19.2.0",
     "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.1"
+    "swagger-ui-express": "^5.0.1",
+    "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"

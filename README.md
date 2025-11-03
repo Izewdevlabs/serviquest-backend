@@ -123,4 +123,82 @@ cd serviquest-backend
 npm install
 
 
+Running Locally
+# Set up .env (see below)
+npm run dev
 
+
+Server will run at http://localhost:5000, Swagger docs at http://localhost:5000/api-docs.
+
+Environment Variables
+
+Create a .env file in the root with the following keys (replace placeholders accordingly):
+
+PORT=5000
+DATABASE_URL=postgres://postgres:password@localhost:5432/serviquest_db
+JWT_SECRET=your_jwt_secret_here
+STRIPE_SECRET_KEY=sk_test_your_key_here
+STRIPE_PUBLIC_KEY=pk_test_your_key_here
+FIREBASE_PROJECT_ID=your_project_id
+FIREBASE_CLIENT_EMAIL=service-account@project.iam.gserviceaccount.com
+FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYOUR_KEY_HERE\n-----END PRIVATE KEY-----\n"
+
+
+Important: Do not commit your .env. Use .env.example instead.
+
+API Documentation
+
+Once the server is running, browse to:
+http://localhost:5000/api-docs
+Here you’ll find all routes documented, including auth, services, bookings, payments, admin endpoints.
+
+WebSocket Chat
+
+Under the hood, the backend uses Socket.io to facilitate chat between users and service providers.
+Key events:
+
+joinRoom: join a chat room by roomId
+
+sendMessage: send a message object to the room
+
+receiveMessage: event emitted to all room participants
+
+Directory Structure
+serviquest-backend/
+│  ├─ src/
+│  │   ├─ controllers/
+│  │   ├─ models/
+│  │   ├─ routes/
+│  │   ├─ config/
+│  │   └─ server.js
+│  ├─ .env.example
+│  ├─ .gitignore
+│  └─ README.md
+
+Contributing
+
+Contributions are welcome!
+
+Fork the repo
+
+Create your branch: git checkout -b feature/my-feature
+
+Commit your changes: git commit -m 'Add some feature'
+
+Push to the branch: git push origin feature/my-feature
+
+Open a Pull Request and reference relevant issues
+
+Please follow the code style used throughout the repo and include tests if adding features.
+
+License
+
+This project is licensed under the MIT License – see the LICENSE
+ file for details.
+
+Contact
+
+Izew Dev Labs – Twitter
+ | Website
+
+Feel free to open issues or discussion for assistance or feature requests.
